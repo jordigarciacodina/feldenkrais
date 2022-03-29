@@ -1,0 +1,230 @@
+// Site navigation
+
+.genesis-nav-menu {
+	clear: both;
+	line-height: 1;
+	width: 100%;
+	.menu-item {
+		display: block;
+		float: none;
+		position: relative;
+		a {
+			color: @primary-color;
+			display: block;
+			.font-size(15);
+			font-weight: 400;
+			outline-offset: -1px;
+			padding-bottom: 12px;
+			padding-top: 12px;
+			text-decoration: none;
+		}
+	}
+	a:focus,
+	a:hover,
+	a:active,
+	.current-menu-item > a,
+	.sub-menu .current-menu-item > a:focus,
+	.sub-menu .current-menu-item > a:hover {
+		color: @featured-color;
+		text-decoration: none;
+		font-weight: 700;
+	}
+	.sub-menu,
+	.sub-menu a {
+		width: 100%;
+	}
+	.sub-menu {
+		clear: both;
+		display: none;
+		left: -9999px;
+		margin: 0;
+		opacity: 1;
+		padding-left: 15px;
+		position: static;
+		z-index: 99;
+		a {
+			background-color: @base-color;
+			.font-size(14);
+			position: relative;
+			word-wrap: break-word;
+		}
+	}
+	.menu-item:focus,
+	.menu-item:hover {
+		position: relative;
+	}
+	.menu-item:hover > .sub-menu {
+		display: block;
+		left: auto;
+		opacity: 1;
+	}
+}
+
+/* Responsive Menu
+--------------------------------------------- */
+
+.menu .menu-item:focus {
+	position: static;
+}
+
+.menu .menu-item > a:focus + ul.sub-menu,
+.menu .menu-item.sfHover > ul.sub-menu {
+	left: auto;
+	opacity: 1;
+}
+
+.genesis-responsive-menu {
+	display: none;
+	position: relative;
+	padding-top: 0;
+	.menu-item {
+		padding: 15px 0;
+		border-bottom: 1px solid @border-color;
+	}
+	.genesis-nav-menu .menu-item:hover > .sub-menu {
+		display: none;
+	}
+}
+
+.menu-toggle,
+.sub-menu-toggle {
+	background-color: transparent!important;
+	border-width: 0;
+	border: 0!important;
+	color: @primary-color!important;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+	visibility: visible;
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover,
+.menu-toggle:active,
+.sub-menu-toggle:focus,
+.sub-menu-toggle:hover {
+	background-color: transparent!important;
+	border: 0!important;
+	color: @primary-color!important;
+	border-width: 0;
+	color: @featured-color;
+}
+
+.menu-toggle {
+	float: right;
+	line-height: 20px;
+	margin: 5px 0!important;
+	padding: 5px 0!important;
+	position: relative;
+	z-index: 1000;
+	background: transparent!important;
+}
+
+.menu-toggle.activated::before {
+	content: "\f335";
+}
+
+.site-header .menu-toggle::before {
+	float: left;
+	margin-right: 10px;
+	position: relative;
+	text-rendering: auto;
+	.font-size(30);
+}
+
+.sub-menu-toggle {
+	float: right;
+	padding: 9px 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.sub-menu .sub-menu-toggle {
+	padding: 12px 10px;
+}
+
+.sub-menu-toggle::before {
+	display: inline-block;
+	text-rendering: auto;
+	transform: rotate(0);
+	transition: transform 0.25s ease-in-out;
+}
+
+.sub-menu-toggle.activated::before {
+	transform: rotate(180deg);
+}
+
+.js-superfish {
+	display: inherit;
+}
+
+/* Header Menu
+--------------------------------------------- */
+
+.nav-members,
+.nav-nonmembers {
+	clear: left;
+	padding: 15px;
+	width: 100%;
+}
+
+/* Other Menus
+--------------------------------------------- */
+
+.menu-filter-menu-container .genesis-nav-menu,
+.menu-social-menu-container .genesis-nav-menu,
+.nav-secondary .genesis-nav-menu {
+	line-height: 1.5;
+}
+
+.menu-filter-menu-container .menu-item,
+.menu-social-menu-container .menu-item,
+.nav-secondary .menu-item {
+	display: inline-block;
+}
+
+.menu-filter-menu-container a,
+.menu-social-menu-container a,
+.nav-secondary a {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0;
+}
+
+#menu-social-menu i {
+	color: @featured-color;
+}
+
+#menu-intranet-menu {
+	text-align: center;
+	margin: 30px 0;
+	width: 100%;
+	.flex();
+	flex-direction: column;
+	.menu-item {
+		background-color: @tabs-color;
+		border-top: 1px solid @tabs-color;
+		border-left: 1px solid @tabs-color;
+		border-right: 1px solid @tabs-color;
+		border-bottom: 1px solid @tabs-color;
+		padding: 5px 30px;
+		flex-grow: 1;
+		a {
+			padding: 5px;
+			&:hover,
+			&:focus {
+				color: @primary-color;
+			}
+		}
+	}
+	.current-menu-item {
+		background: @base-color;
+		border-bottom: 1px solid @base-color;
+		a {
+			color: @primary-color;
+		}
+	}
+}

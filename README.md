@@ -1,2 +1,2 @@
-# feldenkrais
-Feldenkrais Genesis Child Theme
+# Feldenkrais
+## This is the Memberships Starter Genesis Child Theme 

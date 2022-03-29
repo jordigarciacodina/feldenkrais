@@ -1,0 +1,164 @@
+// Content area
+
+/* Entry Content
+--------------------------------------------- */
+
+.entry {
+	margin-bottom: 30px;
+}
+
+.entry-content {
+	ol,
+	ul {
+		margin-bottom: 30px;
+		padding-left: 40px;
+	}
+	ol > li {
+		list-style-type: decimal;
+	}
+	 ul > li {
+		list-style-type: disc;
+	}
+	ol ul > li,
+	ul ul > li {
+		list-style-type: circle;
+	}
+	ol ol,
+	ul ul {
+		margin-bottom: 0;
+	}
+	code {
+		background-color: @background-color;
+	}
+}
+
+.content .sticky {
+	background-color: @background-color;
+	padding: 30px;
+}
+
+/* Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+.entry-header .entry-meta {
+	margin-bottom: 20px;
+}
+
+.entry-footer .entry-meta {
+	border-top: 1px solid @border-color;
+	padding-top: 20px;
+}
+
+.entry-categories,
+.entry-tags {
+	display: block;
+}
+
+.entry-comments-link::before {
+	content: "\2014";
+	margin: 0 6px 0 2px;
+}
+
+/* Pagination
+--------------------------------------------- */
+
+.pagination {
+	clear: both;
+	margin: 60px 0;
+}
+
+.adjacent-entry-pagination {
+	margin-bottom: 0;
+}
+
+.archive-pagination li {
+	display: inline;
+	a {
+		background-color: @background-color;
+		color: @primary-color;
+		cursor: pointer;
+		display: inline-block;
+		.font-size(16);
+		font-weight: 600;
+		margin-bottom: 4px;
+		padding: 8px 12px;
+		text-decoration: none;
+	}
+}
+
+.archive-pagination li a:focus,
+.archive-pagination li a:hover,
+.archive-pagination li.active a {
+	background-color: @primary-color;
+	color: @base-color;
+}
+
+/* Entry Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	margin-bottom: 30px;
+	max-width: @template-max-width;
+	margin: 0 auto;
+}
+
+.comment-list {
+	li {
+		padding: 30px 0 0 30px;
+	}
+	.depth-1 {
+		padding-left: 0;
+	}
+	article {
+		background: @background-color;
+		padding: 30px;
+	}
+	.children {
+		article {
+			border-left: 3px solid @featured-color;
+			padding-left: 30px;
+		}
+	}
+}
+
+.comment-header {
+	margin-bottom: 30px;
+	.comment-author-name {
+		font-weight: 700;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.comment-content {
+	clear: both;
+	ul > li {
+		list-style-type: disc;
+	}
+}
+
+.comment-respond {
+	margin-top: 30px;
+	input[type="email"],
+	input[type="text"],
+	input[type="url"],
+	textarea {
+		width: 100%;
+	}
+	label {
+		display: none;
+		margin-right: 12px;
+	}
+}
+
+.entry-pings .reply {
+	display: none;
+}

@@ -1,0 +1,51 @@
+// Structure 
+
+/* Site Container
+--------------------------------------------- */
+
+.site-container {
+	animation: fadein 1s;
+	word-wrap: break-word;
+	display: -ms-flexbox;
+	display:-webkit-flex;
+	display:-webkit-box;
+	display:flex;
+	-ms-flex-direction:column;
+	-webkit-flex-direction:column;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	flex-direction:column;
+	min-height:100vh;
+}
+
+@keyframes fadein {
+
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+
+}
+
+/* Site Inner
+--------------------------------------------- */
+
+.site-inner {
+	clear: both;
+	margin: 0 auto;
+	padding: 60px 30px 0;
+	-ms-flex:1;
+	-webkit-flex:1;
+	-webkit-box-flex:1;
+	flex:1;
+	width: 100%;
+}
+
+.super-full-width-page .site-inner {
+	width: 100%;
+	padding: 0;
+	max-width: 100%;
+}
