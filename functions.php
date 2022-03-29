@@ -1,10 +1,10 @@
 <?php
 /**
- * Memberships Starter.
+ * Feldenkrais.
  *
- * This file adds functions to the Memberships Starter Theme.
+ * This file adds functions to the Feldenkrais Theme.
  *
- * @package Memberships Starter
+ * @package Feldenkrais
  * @author  Bicicleta Studio
  * @license GPL-2.0-or-later
  * @link    https://bicicleta.studio
@@ -36,15 +36,6 @@ require_once get_stylesheet_directory() . '/lib/customize.php';
 
 // Includes Customizer CSS.
 require_once get_stylesheet_directory() . '/lib/output.php';
-
-// Adds WooCommerce support.
-require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-setup.php';
-
-// Adds the required WooCommerce styles and Customizer CSS.
-require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.php';
-
-// Adds the Genesis Connect WooCommerce notice.
-require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
 add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
 /**
@@ -136,18 +127,7 @@ function genesis_sample_post_type_support() {
 add_image_size('genesis-grid', 700, 350, true);
 add_image_size( 'genesis-singular-images', 702, 526, true );
 
-// Removes header right widget area.
-unregister_sidebar( 'header-right' );
 
-// Removes secondary sidebar.
-unregister_sidebar( 'sidebar-alt' );
-
-// Removes site layouts.
-genesis_unregister_layout('content-sidebar');
-genesis_unregister_layout('sidebar-content');
-genesis_unregister_layout('content-sidebar-sidebar');
-genesis_unregister_layout('sidebar-content-sidebar');
-genesis_unregister_layout('sidebar-sidebar-content');
 
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
@@ -239,38 +219,6 @@ function bs_logout_menu_link( $items, $args ) {
    return $items;
 }
 
-// Define is_child() function
-function is_child($pageID) {
-    global $post;
-    if (is_page() && $post->post_parent == $pageID) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-// Register intranet menu
-add_action('init', 'bs_register_intranet_menu');
-function bs_register_intranet_menu() {
-    register_nav_menu('intranet-menu', __('Intranet menu'));
-}
-
-// Hooking intranet menu ('ID of Intranet page')
-add_action('genesis_before_content', 'bs_hooking_intranet_menu');
-function bs_hooking_intranet_menu() {
-    if (is_page('92') || is_child('92')):// Modificar ID's ?>
-		<div class="entry-header"><h1 class="entry-title intranet-title"><?php echo the_title(); ?></h1></div>
-		<?php wp_nav_menu(
-			array(
-      			'theme_location'  => 'intranet-menu',
-				'menu_class' 	  => 'genesis-nav-menu'
-  			)
-		);
-		remove_action('genesis_entry_header', 'genesis_do_post_title');
-	endif;
-
-}
-
 // Register social menu
 add_action('init', 'bs_register_social_menu');
 function bs_register_social_menu() {
@@ -288,12 +236,6 @@ function bs_hooking_social_menu() {
 			)
 		);
     endif;
-}
-
-// Register Filter menu
-add_action('init', 'bs_register_filter_menu');
-function bs_register_filter_menu() {
-    register_nav_menu('filter-menu', __('Filter menu'));
 }
 
 // Colocamos el nombre del field en placeholder
@@ -388,20 +330,7 @@ function bs_display_cta_section() {
 			<div class="wrap">
 				<div class="box">
 					<h1><?php echo get_theme_mod('hero_title'); ?></h1>
-					<div class="benefits">
-						<div class="benefit">
-							<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
-							<p><?php echo get_theme_mod('hero_benefit_1_text'); ?></p>
-						</div>
-						<div class="benefit">
-							<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
-							<p><?php echo get_theme_mod('hero_benefit_2_text'); ?></p>
-						</div>
-						<div class="benefit">
-							<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
-							<p><?php echo get_theme_mod('hero_benefit_3_text'); ?></p>
-						</div>
-					</div>
+					<p><?php echo get_theme_mod('hero_description'); ?></p>
 					<div class="cta">
 						<button class="primary" onclick="window.location.href='<?php echo get_theme_mod('hero_primary_cta_link'); ?>'"><?php echo get_theme_mod('hero_primary_cta_text'); ?></button>
 					</div>
