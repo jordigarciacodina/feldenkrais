@@ -1,128 +1,5 @@
 // Plugins
 
-/* Restrict Content Pro
---------------------------------------------- */
-
-#rcp_user_login_wrap,
-#rcp_password_again_wrap,
-#rcp_user_last_wrap,
-.rcp_description,
-.rcp_subscription_message,
-.rcp_registration_total,
-.rcp_login_link,
-.rcp_header,
-#rcp_subscription_levels,
-#rcp_card_wrap label,
-#rcp_profile_display_name_wrap,
-#rcp-sandbox-gateway-test-cards {
-	display: none!important;
-}
-
-#rcp_card_wrap {
-	margin-top: 20px!important;
-}
-
-#rcp_user_login,
-#rcp_user_email,
-#rcp_user_first,
-#rcp_user_last,
-#rcp_password,
-#rcp_password_again,
-.rcp_card_name,
-#rcp-card-element {
-	padding: 12px!important;
-	background: @background-color!important;
-	width: 100%;
-    margin-bottom: 20px;
-}
-
-#rcp-card-element {
-	border: none;
-	height: auto;
-	margin-bottom: 0;
-}
-
-#rcp_submit {
-	width: auto;
-	margin-top: 20px;
-	.common-btn();
-}
-
-.rcp_form p {
-	margin: 0 !important;
-}
-
-.rcp-gateway-saved-payment-methods {
-	.rcp-gateway-saved-payment-method,
-	.rcp-gateway-add-payment-method-wrap {
-		list-style-type: none!important;
-	}
-}
-
-.restrict-wrapper {
-	color: @base-color;
-	background-color: @featured-color;
-	border: 1px solid @featured-color;
-	border-radius: 5px;
-	margin: 10px auto 30px !important;
-	padding: 30px;
-	text-align: center;
-	.dashicons-lock {
-		.font-size(40);
-		width: 100%;
-		margin-bottom: 30px;
-	}
-	p {
-		display: block;
-		margin-bottom: 0;
-	}
-	a {
-		font-weight: 700;
-		color: @base-color;
-	}
-}
-
-/* Intranet */
-
-#rcp_profile_editor_form {
-	legend {
-		.font-size(22);
-		font-weight: 700;
-		margin-bottom: 10px;
-	}
-	fieldset {
-		margin: 0 0 30px;
-	}
-	#rcp_profile_first_name_wrap,
-	#rcp_profile_last_name_wrap,
-	#rcp_profile_password_wrap,
-	#rcp_profile_password_confirm_wrap {
-		margin-bottom: 20px !important;
-	}
-	#rcp_profile_password_confirm_wrap {
-		margin-bottom: 0 !important;
-	}
-	#rcp_first_name,
-	input[name="rcp_email"],
-	#rcp_last_name,
-	#rcp_new_user_pass1,
-	#rcp_new_user_pass2 {
-		width: 100%;
-	}
-}
-
-#rcp_update_card_form {
-	.rcp-gateway-saved-payment-methods li {
-		list-style-type: none!important;
-	}
-    .rcp_current_cards_fieldset {
-		margin-bottom: 30px !important;
-	}
-	.data {
-		margin-bottom: 30px!important;
-	}
-}
-
 /* Easy Digital Downloads
 --------------------------------------------- */
 
@@ -258,9 +135,9 @@ body.edd-checkout #edd_checkout_cart thead,
 
 .edd-buyers,
 .restrict-wrapper {
-	color: @base-color;
-	background-color: @featured-color;
-	border: 1px solid @featured-color;
+	color: @primary-color;
+	background-color: @secondary-color;
+	border: 1px solid @secondary-color;
 	border-radius: 5px;
 	margin: 10px auto 30px auto;
 	padding: 30px;
@@ -277,7 +154,7 @@ body.edd-checkout #edd_checkout_cart thead,
 	}
 	a {
 		font-weight: 700;
-		color: @base-color;
+		color: @primary-color;
 	}
 }
 
@@ -356,308 +233,6 @@ body.edd-checkout #edd_checkout_cart thead,
 	.card-expiration-fields {
 		display: flex !important;
 	}
-}
-
-/* WooCommerce
---------------------------------------------- */
-
-/* Content Restriction */
-
-.restrict-wrapper {
-	color: @base-color;
-	background-color: @featured-color;
-	border: 1px solid @featured-color;
-	border-radius: 5px;
-	margin: 10px 0 30px;
-	padding: 30px;
-	text-align: center;
-	.dashicons-lock {
-		.font-size(40);
-		width: 100%;
-		margin-bottom: 30px;
-		color: @base-color;
-	}
-	p {
-		display: block;
-		margin-bottom: 0;
-	}
-	a {
-		font-weight: 700;
-		color: @base-color;
-	}
-}
-
-/* Checkout */
-
-.woocommerce .col2-set .col-1,
-.woocommerce-page .col2-set .col-1,
-.woocommerce .col2-set .col-2,
-.woocommerce-page .col2-set .col-2,
-.woocommerce form .form-row-first,
-.woocommerce-page form .form-row-first,
-.woocommerce #payment #place_order,
-.woocommerce-page #payment #place_order,
-.woocommerce form .form-row-last,
-.woocommerce-page form .form-row-last {
-	float: none !important;
-	width: 100% !important;
-}
-
-.woocommerce form .form-row {
-	margin-bottom: 20px !important;
-}
-
-#add_payment_method #payment,
-.woocommerce-cart #payment,
-.woocommerce-checkout #payment {
-	background: @base-color!important;
-}
-
-#add_payment_method #payment div.payment_box,
-.woocommerce-cart #payment div.payment_box,
-.woocommerce-checkout #payment div.payment_box,
-.payment_method_stripe {
-	background: @background-color!important;
-}
-
-#payment {
-	padding: 0 !important;
-}
-
-.payment_method_stripe {
-	padding: 15px 15px 0 !important;
-}
-
-#add_payment_method #payment div.payment_box,
-.woocommerce-cart #payment div.payment_box,
-.woocommerce-checkout #payment div.payment_box,
-#add_payment_method #payment ul.payment_methods,
-.woocommerce-cart #payment ul.payment_methods,
-.woocommerce-checkout #payment ul.payment_methods {
-	padding: 0 !important;
-	margin: 0 !important;
-}
-
-label[for="billing_first_name"],
-label[for="billing_last_name"],
-label[for="billing_email"],
-label[for="billing_company"],
-label[for="billing_country"],
-label[for="billing_address_1"],
-label[for="billing_postcode"],
-label[for="billing_city"],
-label[for="billing_state"],
-label[for="billing_phone"],
-label[for="shipping_first_name"],
-label[for="shipping_last_name"],
-label[for="shipping_email"],
-label[for="shipping_company"],
-label[for="shipping_country"],
-label[for="shipping_address_1"],
-label[for="shipping_postcode"],
-label[for="shipping_city"],
-label[for="shipping_state"],
-label[for="shipping_phone"],
-#add_payment_method #payment div.payment_box:before,
-.woocommerce-cart #payment div.payment_box:before,
-.woocommerce-checkout #payment div.payment_box:before,
-label[for=card-element],
-#stripe-payment-data p {
-	display: none !important;
-}
-
-#add_payment_method #payment ul.payment_methods li,
-.woocommerce-cart #payment ul.payment_methods li,
-.woocommerce-checkout #payment ul.payment_methods li {
-	list-style: none !important;
-}
-
-#add_payment_method #payment ul.payment_methods,
-.woocommerce-cart #payment ul.payment_methods,
-.woocommerce-checkout #payment ul.payment_methods {
-	border-bottom: none !important;
-}
-
-.wc-stripe-elements-field,
-.wc-stripe-iban-element-field {
-	padding: 12px !important;
-}
-
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-	.common-btn()!important;
-}
-
-/* Order review */
-
-.woocommerce-order-overview {
-	padding: 0!important;
-}
-
-.woocommerce-customer-details {
-	display: none!important;
-}
-
-/* MyAccount */
-
-.woocommerce-MyAccount-navigation ul {
-	margin-left: 0 !important;
-	padding-left: 0 !important;
-}
-
-.woocommerce .woocommerce-MyAccount-navigation-link {
-	list-style: none !important;
-	padding: 10px 0 !important;
-	a {
-		text-decoration: none!important;
-	}
-}
-
-.woocommerce-MyAccount-navigation {
-	border: none !important;
-	padding: 0 !important;
-	ul {
-		.flex();
-		.woocommerce-MyAccount-navigation-link {
-			background-color: @tabs-color;
-			border-top: 1px solid @tabs-color;
-			border-left: 1px solid @tabs-color;
-			border-right: 1px solid @tabs-color;
-			border-bottom: 1px solid @tabs-color;
-			padding: 5px 30px;
-			margin: 0 !important;
-			flex-grow: 1;
-			a {
-				color: @primary-color;
-				font-weight: 400;
-				padding: 5px;
-				&:hover,
-				&:focus {
-					color: @primary-color;
-				}
-			}
-		}
-		.is-active {
-			background: @base-color;
-			border-bottom: 1px solid @base-color;
-			a {
-				color: @primary-color;
-			}
-		}
-	}
-}
-
-@media (max-width: 960px) {
-	.woocommerce-MyAccount-navigation ul {
-		flex-direction: column !important;
-	}
-}
-
-/* Pedidos */
-
-.woocommerce .woocommerce-customer-details :last-child,
-.woocommerce .woocommerce-order-details :last-child,
-.woocommerce .woocommerce-order-downloads :last-child {
-	margin-bottom: 20px !important;
-}
-
-/* My Subscription */
-
-.woocommerce-customer-details address {
-	border: none !important;
-	padding: 0 !important;
-}
-
-/* Detalles de la cuenta */
-
-.woocommerce-EditAccountForm fieldset {
-	border: none !important;
-	padding: 0 !important;
-	legend {
-		.font-size(22);
-		font-weight: 700;
-		margin-bottom: 10px;
-	}
-}
-
-/* Paid Memberships Pro
---------------------------------------------- */
-
-.pmpro_checkout_gateway-stripe {
-	#pmpro_user_fields {
-		h3 {
-			margin-top: 0!important;
-		}
-		.pmpro_checkout-fields {
-			input[id="username"],
-			input[id="bemail"] {
-				width: 100%!important;
-				max-width: 100%!important;
-			}
-			.personal-info {
-				.flex();
-				.pmpro_checkout-field-firstname,
-				.pmpro_checkout-field-lastname {
-					flex-basis: calc(50% - 10px)!important;
-					margin-bottom: 0!important;
-					input {
-						max-width: 100%!important;
-						width: 100%!important;
-					}
-				}
-			}
-			.pmpro_asterisk {
-				display: none!important;
-			}
-		}
-	}
-	
-	#pmpro_payment_information_fields .pmpro_checkout-h3-msg {
-		display: none!important;
-	}
-	
-	#pmpro_tos_fields #pmpro_license {
-		margin-bottom: 30px!important;
-	}
-}
-
-.restrict-wrapper {
-	color: @base-color;
-	background-color: @featured-color;
-	border: 1px solid @featured-color;
-	border-radius: 5px;
-	margin: 10px auto 30px !important;
-	padding: 30px;
-	text-align: center;
-	.dashicons-lock {
-		.font-size(40);
-		width: 100%;
-		margin-bottom: 30px;
-	}
-	p {
-		display: block;
-		margin-bottom: 0;
-	}
-	a {
-		font-weight: 700;
-		color: @base-color;
-	}
-}
-
-.pmpro_member_profile_edit_wrap {
-	input[type="text"],
-	input[type="email"] {
-		width: 100%!important;
-	}
-	hr {
-		display: none!important;
-	}
-}
-
-#pmpro_account .pmpro_box {
-	border-top: none!important;
 }
 
 /* Download Monitor
@@ -1102,43 +677,69 @@ label[for=card-element],
 	display: none!important;
 }
 
-.page-id-212 .course-container {
-	margin-bottom: 0!important;
-	padding-left: 0!important;
-	display: flex;
-	flex-direction: column;
-	.course {
-		padding: 0!important;
-		float: none!important;
-		.entry {
-			display: flex!important;
-			flex-direction: column;
+.page-id-189 {
+	.content {
+		width: 100%;
+		.course-container {
 			margin-bottom: 0!important;
-			.sensei-course-meta,
-			.course-excerpt {
-				display: none!important;
+			padding-left: 0!important;
+			.flex();
+			.course {
+				padding: 0!important;
+				float: none!important;
+				.entry {
+					display: flex!important;
+					flex-direction: column;
+					margin-bottom: 0!important;
+					.sensei-course-meta,
+					.course-excerpt {
+						display: none!important;
+					}
+					.course-title {
+						order: 2;
+						text-align: center!important;
+						a {
+							.font-size(20)!important;
+							text-decoration: none!important;
+							display: block!important;
+							color: @primary-color!important;
+							text-align: left;
+							box-shadow: none!important;
+							padding: 0!important;
+						}
+					}
+					img {
+						width: 100%!important;
+						margin: 0!important;
+						margin-bottom: 20px!important;
+					}
+				}	
 			}
-			.course-title {
-				order: 2;
-				text-align: center!important;
-				a {
-					.font-size(20)!important;
-					text-decoration: none!important;
-					padding: 20px;
-					display: block!important;
-					color: @primary-color!important;
-					text-align: left;
-					box-shadow: none!important;
-				}
-			}
-			img {
-				width: 100%!important;
-				margin: 0!important;
-			}
-		}	
+		}
 	}
 }
 
 .course-container .user-active {
 	list-style-type: none!important;
+}
+
+.course-container .user-active {
+	list-style-type: none!important;
+}
+
+.wp-block-sensei-lms-button-complete-lesson,
+.wp-block-sensei-lms-button-take-course {
+	button {
+		.common-btn()!important;	
+	}
+}
+
+.wp-block-sensei-lms-button-reset-lesson {
+	button {
+		.inverse-btn(@featured-color)!important;	
+	}
+}
+
+.sensei-progress-bar__progress {
+	background-color: @featured-color!important;
 }

@@ -62,7 +62,6 @@ function bs_display_front_page_sections() {
 		<div class="wrap">
 			<div class="box">
 				<h1><?php echo get_theme_mod('hero_loggedin_title'); ?></h1>
-				<p><?php echo get_theme_mod('hero_loggedin_description'); ?></p>
 			</div>
 		</div>
 	</section>
@@ -76,7 +75,7 @@ function bs_display_front_page_sections() {
 
 			$args = array(
 				'posts_per_page' 	=> 3,
-				'post_type' 		=> 'lesson',
+				'post_type' 		=> 'clase',
 				'order' 			=> 'DESC'
 			);
 

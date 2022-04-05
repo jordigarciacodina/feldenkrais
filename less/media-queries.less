@@ -40,12 +40,6 @@
 	}
 
 	.hero .wrap .box {
-		.benefits {
-			.flex();
-			.benefit i {
-				.font-size(25);
-			}
-		}
 		.cta {
 			flex-direction: row!important;
 			justify-content: center!important;
@@ -79,59 +73,12 @@
 		}
 	}
 
-	.testimonials .wrap {
-		.testimonials-wrapper {
-			.testimonial {
-				.flex();
-				align-items: center;
-				justify-content: space-between;
-				.entry-header {
-					flex-basis: calc(20% - 15px);
-					img {
-						width: 100%;
-					}
-				}
-				.entry-content {
-					flex-basis: calc(80% - 15px);
-				}
-				&:nth-child(even) {
-					.entry-content {
-						order: -1;
-						text-align: right;
-					}
-				}
-			}
-		}
-		.cta {
-			text-align: center;
+	.page-id-189 .content .course-container {
+		.course {
+			flex-basis: calc(50% - 15px)!important;
 		}
 	}
-	.post-type-archive-testimonio .testimonials-wrapper {
-		.testimonio {
-			.flex();
-			align-items: center;
-			justify-content: space-between;
-			.entry-header {
-				flex-basis: calc(20% - 15px);
-				img {
-					width: 100%;
-					margin-bottom: 0;
-				}
-			}
-			.entry-content {
-				flex-basis: calc(80% - 15px);
-			}
-			&:nth-child(even) {
-				.entry-content {
-					order: -1;
-					text-align: right;
-					.entry-title {
-						text-align: right;
-					}
-				}
-			}
-		}
-	}
+
 }
 
 @media only screen and (min-width: 960px) {
@@ -441,39 +388,27 @@
 
 	.hero .wrap {
 		.flex();
-		justify-content: flex-end;
+		justify-content: flex-start;
 		.box {
-			flex-basis: 60%;
+			flex-basis: 50%;
 			text-align: left;
-			.benefits {
-				margin: 30px 0 10px;
-				.benefit {
-					flex-basis: calc(50% - 15px);
-					.flex();
-					justify-content: flex-start;
-					i {
-						margin-right: 10px;
-						align-self: center;
-						justify-content: center;
-					}
-				}
-			}
+			border-radius: 5px;
+			background: rgba(250,250,250,0.5);
+			padding: 30px;
 			.cta {
 				justify-content: flex-start!important;
 			}
 		}
 	}
 
-	.filters .wrap .row li {
-		flex-basis: calc(25% - 15px)!important;
-		margin-bottom: 0!important;
-	}
-
-	.featureds .wrap .row {
-		.flex();
-		.box {
-			flex-basis: calc(25% - 15px);
-			margin-bottom: 0;
+	.featureds .wrap {
+		padding-bottom: 60px;
+		.row {
+			.flex();
+			.box {
+				flex-basis: calc(25% - 15px);
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -491,16 +426,12 @@
 			.font-size(24);
 			text-align: center;
 		}
-		.testimonials-wrapper {
-			max-width: @template-max-width;
-			margin: 0 auto;
-		}
 	}
 
 	.hero-bottom {
 		background-image: none!important;
 		margin-bottom: 0!important;
-		background-color:  @featured-color;
+		background-color:  @secondary-color;
 		.wrap {
 			padding-top: 60px;
 			justify-content: center;
@@ -529,6 +460,12 @@
 		}
 		.footer-widgets {
 			margin-top: 60px;
+		}
+	}
+
+	.page-id-189 .content .course-container {
+		.course {
+			flex-basis: calc(33.33% - 15px)!important;
 		}
 	}
 

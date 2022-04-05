@@ -28,54 +28,9 @@
 			p {
 				margin-bottom: 30px;
 			}
-			.benefits {
-				margin: 30px 0 40px;
-				.flex();
-				.benefit {
-					margin-bottom: 20px;
-					flex-basis: calc(50% - 15px);
-					p:last-child {
-						margin: 0;
-					}
-					i {
-						color: @featured-color;
-					}
-				}
-			}
 			.cta {
 				.flex();
 				flex-direction: column;
-				.primary {
-					margin-bottom: 30px;
-				}
-				.secondary {
-					.inverse-btn(@featured-color);
-				}
-			}
-		}
-	}
-}
-
-/* Filters */
-
-.filters {
-	.section();
-	.wrap {
-		.wrap();
-		padding-bottom: 0;
-		.row {
-			margin: 0;
-			text-align: center;
-			#menu-filter-menu {
-				.flex();
-				li {
-					flex-basis: calc(50% - 15px);
-					margin-bottom: 30px;
-					a {
-						.inverse-btn(@featured-color);
-						width: 100% !important;
-					}
-				}
 			}
 		}
 	}
@@ -85,15 +40,16 @@
 
 .featureds {
 	.section();
+	background-color: @secondary-color;
 	.wrap {
 		.wrap();
+		padding-bottom: 30px;
 		.row {
+			.flex();
 			.box {
 				text-align: center;
 				margin-bottom: 30px;
-				img {
-					margin-bottom: 20px;
-				}
+				flex-basis: calc(50% - 15px);
 				p {
 					margin-bottom: 0;
 				}
@@ -106,10 +62,11 @@
 
 .posts-loop {
 	.section();
-	margin-bottom: 60px;
 	.wrap {
 		.wrap();
-		padding: 0 30px;
+		h3 {
+			text-align: center;
+		}
 		.posts-wrapper {
 			a {
 				text-decoration: none;
@@ -118,14 +75,12 @@
 				background-color: @base-color;
 				display: flex;
 				article {
-					box-shadow: 0 5px 15px -10px rgb(0,0,0,.3);
 					.entry-header {
 						img {
-							margin-bottom: 0;
+							margin-bottom: 20px;
 						}
 					}
 					.entry-content {
-						padding: 15px;
 						.entry-title {
 							.font-size(20);
 							margin-bottom: 0;
@@ -148,63 +103,22 @@
 	}
 }
 
-section.recurso {
-	margin-bottom: 0;
-}
-
 /* Testimonials */
 
 .testimonials {
+	background-color: @background-color;
 	.section();
 	.wrap {
 		.wrap();
-		.testimonials-wrapper {
-			.flex();
-			flex-direction: column;
-			.testimonial {
-				margin-bottom: 30px;
-				text-decoration: none;
-				color: @primary-color;
-				font-weight: 400;
-				.font-size(18);
-				&:hover {
-					font-weight: 400;
-				}
-				.entry-header {
-					img {
-						width: 33.33%;
-						margin-bottom: 20px;
-					}
-				}
-				.entry-content {
-					display: flex;
-					flex-direction: column;
-					h4 {
-						order: 2;
-						.font-size(20);
-						font-weight: 700;
-					}
-					p {
-						margin-bottom: 10px;
-					}
-				}
+		.cta {
+			text-align: center;
+			button {
+				.inverse-btn(@primary-color);
 			}
-		}
-		.cta button {
-			.inverse-btn(@primary-color);
 		}
 	}
 }
 
 .hero-bottom {
-	background:  @featured-color;
-	.wrap .box {
-		.benefits .benefit i {
-			color: @primary-color;
-		}
-		.cta button {
-			background-color: @background-color;
-			color: @primary-color;
-		}
-	}
+	background-color: @secondary-color;
 }
