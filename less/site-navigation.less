@@ -29,6 +29,7 @@
 		color: @featured-color;
 		text-decoration: none;
 		font-weight: 700;
+		background-color: @secondary-color;
 	}
 	.sub-menu,
 	.sub-menu a {
@@ -187,45 +188,12 @@
 	display: inline-block;
 }
 
-.menu-filter-menu-container a,
 .menu-social-menu-container a,
 .nav-secondary a {
 	margin-left: 10px;
 	margin-right: 10px;
-	padding: 0;
 }
 
 #menu-social-menu i {
 	color: @featured-color;
-}
-
-#menu-intranet-menu {
-	text-align: center;
-	margin: 30px 0;
-	width: 100%;
-	.flex();
-	flex-direction: column;
-	.menu-item {
-		background-color: @tabs-color;
-		border-top: 1px solid @tabs-color;
-		border-left: 1px solid @tabs-color;
-		border-right: 1px solid @tabs-color;
-		border-bottom: 1px solid @tabs-color;
-		padding: 5px 30px;
-		flex-grow: 1;
-		a {
-			padding: 5px;
-			&:hover,
-			&:focus {
-				color: @primary-color;
-			}
-		}
-	}
-	.current-menu-item {
-		background: @base-color;
-		border-bottom: 1px solid @base-color;
-		a {
-			color: @primary-color;
-		}
-	}
 }
